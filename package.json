@@ -1,0 +1,52 @@
+{
+  "name": "App",
+  "version": "0.0.1",
+  "description": "Boilerplate code for a basic react-native app with redux, immutable and jest.",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "test": "jest",
+    "lint": "eslint src/ test/ index.*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushbhagat/react-native-scaffold.git"
+  },
+  "author": "ayushbhagat",
+  "homepage": "https://github.com/ayushbhagat/react-native-scaffold",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "prop-types": "^15.5.10",
+    "react": "~15.4.1",
+    "react-native": "0.42.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "enzyme": "^2.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
+    "react-addons-test-utils": "~15.4.0",
+    "react-dom": "~15.4.1",
+    "react-native-cli": "^2.0.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testMatch": [
+      "**/test/**/*.js"
+    ]
+  },
+  "//": {
+    "react": "Downgrade versions because react-native depends on react 16-alpha but enzyme depends on react 15. See https://github.com/airbnb/enzyme/issues/928 for more details."
+  }
+}
