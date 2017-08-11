@@ -38,6 +38,11 @@ To run linter on all files:
 npm run lint
 ```
 
+To link Android and iOS files from libraries:
+```
+npm run link
+```
+
 ## Style Guide
 ### Imports and Exports
 * Prefer to import JS files without using the `.js` file extension.
@@ -54,18 +59,18 @@ npm run lint
 * Prefer `Object.freeze` when creating constant objects, so that accidental changes of values don’t persist.
 * Prefer to export inner components by name and suffix the names with the string `Inner` when defining components that use higher-order components (HOC) so that the inner components can be tested separately.
 
-### React Miscellaneous
+### React
 * Prefer property initializer syntax for setting `propTypes`, `defaultProps`, `contextTypes`, `childContextTypes`, `childContext`, and `state`.
 * Prefer object rest to get data from objects.
 * Prefer using `PureComponent` instead of `Component` to use shallow rendering.
 * Prefer to define functions that are passed down as props earlier instead of defining them inline so the same pointer can be passed down to effectively use shallow rendering.
 * Prefer `loadash.memoize` to define functions that return functions (based on the parameter) that are passed down as props.
 
-### Redux Miscellaneous
+### Redux
 * Prefer to dispatch Redux actions as JS objects instead of immutable objects, but store immutable objects in the Redux store when reducing state.
 * Prefer containers per screen/activity to pass down a slice of the Redux state, instead of using the state directly in presentational components to decouple the presentational components from the application state.
 
-### JS Miscellaneous
+### JS
 * Prefer 2 spaces over tabs.
 * Prefer to limit the number of characters to 100 per line.
 * Prefer line comments instead of block comments.
@@ -76,3 +81,6 @@ npm run lint
 * Prefer no spaces before and after curly braces when creating objects on 1 line.
 * Prefer arrow functions over ES5 functions when possible with the exception of React component methods and in situations where it would be useful to allow binding its own this.
 * Prefer `redux.compose` when composing multiple functions instead of calling them directly.
+
+## Notes
+* If you see the error "Attempted to remove more RCTKeyboardObserver listeners than added" when using `react-native@0.42.0`, see https://github.com/facebook/react-native/issues/12223 for more details.
