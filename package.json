@@ -19,6 +19,7 @@
   "author": "ayushbhagat",
   "homepage": "https://github.com/ayushbhagat/react-native-scaffold",
   "dependencies": {
+    "base-64": "^0.1.0",
     "immutable": "^3.8.1",
     "lodash.memoize": "^4.1.2",
     "prop-types": "^15.5.10",
