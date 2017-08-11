@@ -84,3 +84,4 @@ npm run link
 
 ## Notes
 * If you see the error "Attempted to remove more RCTKeyboardObserver listeners than added" when using `react-native@0.42.0`, see https://github.com/facebook/react-native/issues/12223 for more details.
+* Use the default fetch API provided by React Native, instead of using `isomorphic-fetch` because it doesn't work on the JS engine that runs on Android. It doesn't work because the JS engine doesn't support self, which is used internally by `fetch` that `isomorphic-fetch` uses.
