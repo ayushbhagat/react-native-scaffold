@@ -27,6 +27,7 @@ npm run android
 ```
 For the iOS simulator, press `Cmd+R` to reload and `Cmd+D` or shake for dev menu.  
 For the Android simulator, double tap `R` to reload and press `MENU` or shake for dev menu.
+Note that running `npm run android` only uploads the app to the emulator. The emulator must be opened manually before running the command. The command to open the emulator is `emulator -avd [name]`.
 
 To run tests in the `test` directory:
 ```
